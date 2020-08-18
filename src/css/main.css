@@ -1,0 +1,21 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-container {
+  max-width: 1170px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 calc( ((40px - 20px) / (1024 - 320)) * 100vw );
+}

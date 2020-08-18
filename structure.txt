@@ -1,0 +1,8 @@
+блоки:
+.btn
+  .btn_outline
+
+.rounded-circle
+
+.link
+  .link_active
