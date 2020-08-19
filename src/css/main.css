@@ -11,11 +11,50 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 100%;
+  font-family: Roboto, sans-serif;
 }
 
 .fixed-container {
   max-width: 1170px;
   min-width: 320px;
   margin: 0 auto;
-  padding: 0 calc( ((40px - 20px) / (1024 - 320)) * 100vw );
+  padding: 0 20px;
+}
+
+@media (min-width: 320px) {
+  .fixed-container {
+    /* 
+    max-value: 40px
+    min-value: 20px
+    max-breakpoint: 1024px
+    min-breakpoint: 320px
+    y(x) = kx + b */
+    padding: 0 calc(
+      (40 - 20) / (1024 - 320) * 
+      100vw + 
+      20px - 
+      (40 - 20) / (1024 - 320) * 
+      320px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .fixed-container {
+    padding: 0 40px;
+  }
+}
+
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
 }
