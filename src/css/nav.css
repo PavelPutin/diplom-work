@@ -73,6 +73,11 @@
   padding: 5px;
 }
 
+.nav__link:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
 @media(min-width: 1025px) {
   .nav__toggle {
     display: none;

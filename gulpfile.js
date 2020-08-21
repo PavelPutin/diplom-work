@@ -17,7 +17,8 @@ const PATH = {
   },
   src: {
     html: `${SOURCE_FOLDER}/*.html`,
-    css: `${SOURCE_FOLDER}/${CSS_FOLDER}/style.css`,
+    css: `${SOURCE_FOLDER}/${CSS_FOLDER}/*.css`,
+    // css: `${SOURCE_FOLDER}/${CSS_FOLDER}/style.css`,
     js: `${SOURCE_FOLDER}/${JS_FOLDER}/*.js`,
     img: `${SOURCE_FOLDER}/${IMG_FOLDER}/**/*.{jpg,png,gif,svg,webp,ico}`,
     fonts: `${SOURCE_FOLDER}/${FONTS_FOLDER}/**/*.ttf`,
@@ -87,6 +88,7 @@ function html() {
 
 function css() {
   return src(PATH.src.css)
+    .pipe(concat(`style.min.css`))
     .pipe(cleanCss())
     .pipe(autoprefixer({
       overrideBrowserslist: [`last 5 versions`],
@@ -96,9 +98,6 @@ function css() {
     .pipe(webpcss())
     .pipe(dest(PATH.build.css))
     .pipe(cleanCss())
-    .pipe(rename({
-      extname: `.min.css`
-    }))
     .pipe(dest(PATH.build.css))
     .pipe(browserSync.stream());
 }
