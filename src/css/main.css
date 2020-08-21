@@ -19,29 +19,31 @@ body {
   max-width: 1170px;
   min-width: 320px;
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media (min-width: 320px) {
-  .fixed-container {
-    /* 
+  /* 
     max-value: 40px
     min-value: 20px
     max-breakpoint: 1024px
     min-breakpoint: 320px
     y(x) = kx + b */
-    padding: 0 calc(
+  padding: 0 calc(
       (40 - 20) / (1024 - 320) * 
       100vw + 
       20px - 
       (40 - 20) / (1024 - 320) * 
       320px);
+}
+
+@media (max-width: 320px) {
+  .fixed-container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media (min-width: 1024px) {
   .fixed-container {
-    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -57,4 +59,8 @@ body {
 
 .flex-direction-column {
   flex-direction: column;
+}
+
+.pos-relative {
+  position: relative;
 }

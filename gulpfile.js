@@ -25,7 +25,7 @@ const PATH = {
   watch: {
     html: `${SOURCE_FOLDER}/**/*.html`,
     css: `${SOURCE_FOLDER}/${CSS_FOLDER}/**/*.css`,
-    js: `${SOURCE_FOLDER}/${JS_FOLDER}/**/*.js`,
+    js: `${SOURCE_FOLDER}/${JS_FOLDER}/*.js`,
     img: `${SOURCE_FOLDER}/${IMG_FOLDER}/**/*.{jpg,png,gif,svg,webp,ico}`,
   },
   baseDir: `./` + PROJECT_FOLDER + `/`
@@ -37,14 +37,10 @@ const autoprefixer = require(`gulp-autoprefixer`);
 const groupCssMediaQueries = require(`gulp-group-css-media-queries`);
 const cleanCss = require(`gulp-clean-css`);
 const rename = require(`gulp-rename`);
-const uglifyEs = require(`gulp-uglify-es`).default;
 const babel = require(`gulp-babel`);
-
 const eslint = require(`gulp-eslint`);
 const terser = require(`gulp-terser`);
-const sourcemaps = require(`gulp-sourcemaps`);
 const concat = require(`gulp-concat`);
-
 const imagemin = require(`gulp-imagemin`);
 const imageminPngquant = require(`imagemin-pngquant`);
 const webp = require(`gulp-webp`);
@@ -107,7 +103,6 @@ function css() {
     .pipe(browserSync.stream());
 }
 
-// TODO: доделать этот таск
 function js() {
   return src(PATH.src.js)
     .pipe(concat(`script.js`))
@@ -124,11 +119,7 @@ function js() {
 
 function images() {
   return src(PATH.src.img)
-    .pipe(
-      webp({
-        quality: 70
-      })
-    )
+    .pipe(webp({ quality: 70 }))
     .pipe(dest(PATH.build.img))
     .pipe(src(PATH.src.img))
     .pipe(imagemin([
@@ -139,8 +130,8 @@ function images() {
       }),
       imagemin.svgo({
         plugins: [
-            {removeViewBox: true},
-            {cleanupIDs: false}
+          {removeViewBox: true},
+          {cleanupIDs: false}
         ]
       })
     ],

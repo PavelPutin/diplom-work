@@ -13,8 +13,28 @@
       320px);
     min-height: 650px;
     max-height: 770px;
+    
 }
 
 .page-header__inner {
   height: 100%;
+  padding-top: 26px;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+  .page-header__inner {
+    padding-top: 29px;
+  }
+}
+
+.page-header__decoration {
+  position: absolute;
+  width: 420px;
+  height: auto;
+  z-index: -1;
+}
+
+.page-header__top-bar {
+  justify-content: space-between;
 }
