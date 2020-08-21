@@ -1,0 +1,22 @@
+.link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 
+    0.3s color linear, 
+    0.3s border-bottom-color linear;
+}
+
+.link:hover,
+.link.active {
+  color: #fc557c;
+}
+
+.link:hover {
+  border-bottom-color: #fc557c;
+}
+
+.link:active {
+  color: #fa87a2;
+  border-bottom-color: #fa87a2;
+}
