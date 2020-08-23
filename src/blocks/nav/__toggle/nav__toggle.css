@@ -1,0 +1,47 @@
+.nav__toggle {
+  display: block;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.nav-toggle__svg {
+  width: 24px;
+  height: 18px;
+}
+
+.nav-toggle__line {
+  width: 100%;
+  height: 2px;
+  fill: #fa0891;
+  transition: 0.25s transform ease-in-out,
+              0.25s fill ease-in-out;
+}
+
+.nav-toggle__line:last-of-type {
+  fill: url(#gradient_for_last_line);
+}
+
+.nav-toggle.active .nav-toggle__line:first-of-type {
+  y: 8px;
+  transform-origin: center;
+  transform: rotate(45deg);
+  fill: #000;
+}
+
+.nav-toggle.active .nav-toggle__line:nth-of-type(2) {
+  fill: transparent;
+}
+
+.nav-toggle.active .nav-toggle__line:last-of-type {
+  y: 8px;
+  transform-origin: center;
+  transform: rotate(-45deg);
+  fill: #000;
+}
+
+@media(min-width: 1025px) {
+  .nav__toggle {
+    display: none;
+  }
+}

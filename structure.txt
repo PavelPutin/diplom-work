@@ -1,8 +1,193 @@
-блоки:
-.btn
-  .btn_outline
+blocks/
+  page/
+    page.css
+    page.js
 
-.rounded-circle
+  header/
+    __inner/
+      header__inner.css
+    __top-bar/
+      header__top-bar.css
+    __nav/
+      header__nav.css
+      header__nav.js
+    __contacts/
+      header__contacts.css
+      header__contacts.js
+    -contacts/
+      __button/
+        header-contacts__button.css
+    __flying-decor-item/
+      header__flying-decor-item.css
+      _type/
+        header__flying-decor-item_type_braces.css
+        header__flying-decor-item_type_hash.css
+        header__flying-decor-item_type_empty-tag-1.css
+        header__flying-decor-item_type_empty-tag-2.css
+        header__flying-decor-item_type_tag-div-1.css
+        header__flying-decor-item_type_tag-div-2.css
+    __content/
+      header__content.css
+    -content/
+      __button/
+        header-content__button.css
+    __title/
+      header__title.css
+    __lead/
+      header__lead.css
+    header.css
+    header.js
 
-.link
-  .link_active
+  fixed-container/
+    fixed-container.css
+
+  list-unstyled/
+    list-unstyled.css
+
+  link/
+    link.css
+
+  title/
+    title.css
+
+  nav/
+    __toggle/
+      nav__toggle.css
+    __list/
+      nav__list.css
+    __item/
+      nav__item.css
+    __link/
+      _active/
+        nav__link_active.css
+      nav__link.css
+    __decoration/
+      nav__decoration.css
+    nav.css
+    nav.js
+
+  contacts/
+    __list/
+      contacts__list.css
+    __item/
+      contacts__item.css
+    __link/
+      _with-icon/
+        contacts__link_with-icon.css
+      contacts__link.css
+    __button/
+      contacts__button.css
+    __social/
+      contacts__social.css
+    contacts.css
+
+  social/
+    __list/
+      social__list.css
+    __item/
+      social__item.css
+    __link/
+      social__link.css
+    __icon/
+      social__icon.css
+    social.css
+
+  flying-decor/
+    __item/
+      flying-decor__item.css
+    flying-decor.css
+
+  button/
+    _style/
+      button_style_outline.css
+    button.css
+    button.js
+  
+  services/
+    __title/
+      services__title.css
+    __list/
+      services__list.css
+    __item/
+      services__item.css
+    __button
+      services__button.css
+    services.css
+  
+  works/
+    __title/
+      works__title.css
+    __gallery/
+      works__gallery.css
+      works__gallery.js
+    works.css
+
+  owl-carousel/
+    owl-carousel.css
+    owl-carousel.js
+
+  offer/
+    __title/
+      offer__title.css
+    __footnote/
+      offer__footnote.css
+    __flying-decor-item/
+      offer__flying-decor-item.css
+      _type/
+        offer__flying-decor-item_type_braces-1.css
+        offer__flying-decor-item_type_braces-2.css
+        offer__flying-decor-item_type_hash.css
+        offer__flying-decor-item_type_empty-tag.css
+        offer__flying-decor-item_type_tag-div.css
+    offer.css
+
+  footer/
+    __nav/
+      footer__nav.css
+    __contacts/
+      footer__contacts.css
+    __copyright/
+      footer__copyright.css
+    footer.css
+
+  popup/
+    __title/
+      popup__title.css
+    __form/
+      popup__form.css
+    __input/
+      popup__input.css
+    __button/
+      popup__button.css
+    popup.css
+    popup.js
+  
+  input/
+    input.css
+    input.js
+
+при нажатии на кнопки "Заказать звонок", "Заказать проект" должны повляться попапы
+
+
+.bg-icon_responsive {
+    width: 61px; height: 56px;
+    background: url('css_sprites.png') -5px -76px;
+}
+
+x
+.bg-icon_tools {
+    width: 61px; height: 56px;
+    background: url('css_sprites.png') -146px -5px;
+}
+
+x
+.bg-icon_coding {
+    width: 61px; height: 61px;
+    background: url('css_sprites.png') -5px -5px;
+}
+
+x
+.bg-icon_programming {
+    width: 60px; height: 60px;
+    background: url('css_sprites.png') -76px -5px;
+}

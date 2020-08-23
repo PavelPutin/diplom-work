@@ -1,0 +1,19 @@
+.link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s color linear, 0.3s border-bottom-color linear;
+}
+
+.link:hover {
+  color: var(--pink-red);
+}
+
+.link:hover {
+  border-bottom-color: var(--pink-red);
+}
+
+.link:active {
+  color: var(--pink-red-lighter);
+  border-bottom-color: var(--pink-red-lighter);
+}

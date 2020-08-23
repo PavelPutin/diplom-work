@@ -1,0 +1,9 @@
+@media(min-width: 1025px) {
+  .nav__item {
+    margin-right: 32px;
+  }
+
+  .nav__item:last-of-type {
+    margin-right: 0;
+  }
+}

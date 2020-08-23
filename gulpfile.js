@@ -17,19 +17,18 @@ const PATH = {
   },
   src: {
     html: `${SOURCE_FOLDER}/*.html`,
-    css: `${SOURCE_FOLDER}/${CSS_FOLDER}/*.css`,
-    // css: `${SOURCE_FOLDER}/${CSS_FOLDER}/style.css`,
-    js: `${SOURCE_FOLDER}/${JS_FOLDER}/*.js`,
-    img: `${SOURCE_FOLDER}/${IMG_FOLDER}/**/*.{jpg,png,gif,svg,webp,ico}`,
+    css: `${SOURCE_FOLDER}/blocks/**/*.css`,
+    js: `${SOURCE_FOLDER}/blocks/**/*.js`,
+    img: `${SOURCE_FOLDER}/blocks/**/*.{jpg,png,gif,svg,webp,ico}`,
     fonts: `${SOURCE_FOLDER}/${FONTS_FOLDER}/**/*.ttf`,
   },
   watch: {
-    html: `${SOURCE_FOLDER}/**/*.html`,
-    css: `${SOURCE_FOLDER}/${CSS_FOLDER}/**/*.css`,
-    js: `${SOURCE_FOLDER}/${JS_FOLDER}/*.js`,
-    img: `${SOURCE_FOLDER}/${IMG_FOLDER}/**/*.{jpg,png,gif,svg,webp,ico}`,
+    html: `${SOURCE_FOLDER}/*.html`,
+    css: `${SOURCE_FOLDER}/blocks/**/*.css`,
+    js: `${SOURCE_FOLDER}/blocks/**/*.js`,
+    img: `${SOURCE_FOLDER}/blocks/**/*.{jpg,png,gif,svg,webp,ico}`,
   },
-  baseDir: `./` + PROJECT_FOLDER + `/`
+  baseDir: `./` + PROJECT_FOLDER + `/`,
 }
 
 const { src, dest, watch, series, parallel } = require(`gulp`);
@@ -98,6 +97,9 @@ function css() {
     .pipe(webpcss())
     .pipe(dest(PATH.build.css))
     .pipe(cleanCss())
+    // .pipe(rename({
+    //   extname: `.min.css`
+    // }))
     .pipe(dest(PATH.build.css))
     .pipe(browserSync.stream());
 }
@@ -160,5 +162,4 @@ exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.fonts = fonts;
-exports.watch = watchTask;
 exports.default = watchTask;

@@ -1,0 +1,22 @@
+.bg-icon_responsive {
+    width: 61px; height: 56px;
+    background: url('css_sprites.png') -5px -76px;
+}
+
+
+.bg-icon_tools {
+    width: 61px; height: 56px;
+    background: url('css_sprites.png') -146px -5px;
+}
+
+
+.bg-icon_coding {
+    width: 61px; height: 61px;
+    background: url('css_sprites.png') -5px -5px;
+}
+
+
+.bg-icon_programming {
+    width: 60px; height: 60px;
+    background: url('css_sprites.png') -76px -5px;
+}

@@ -1,0 +1,16 @@
+.nav__decoration {
+  position: absolute;
+  top: -40px;
+  left: -50px;
+  display: block;
+  width: 200px;
+  height: auto;
+  transform: scale(0);
+  transition: 0.3s transform linear;
+  transform-origin: 57px 50px;
+  z-index: -1;
+}
+
+.nav__decoration.active {
+  transform: scale(1);
+}

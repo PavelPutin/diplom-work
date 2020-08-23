@@ -1,0 +1,9 @@
+.button {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid var(--orange);
+  background: var(--orange);
+  color: #fff;
+}
