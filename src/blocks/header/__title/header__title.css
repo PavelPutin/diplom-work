@@ -7,18 +7,25 @@
   .header__title {
     /* (320px, 10px) -> (1024px, 21px) */
     margin-bottom: calc(
-      3.375rem +
-      (26 - 0) / (1170 - 1024) * 
+      (21 - 10) / (1024 - 320) * 
       100vw + 
-      0px - 
-      (26 - 0) / (1170 - 1024) * 
-      1024px
-    );;
+      10px - 
+      (21 - 10) / (1024 - 320) * 
+      320px
+    );
   }
 }
 
 @media (min-width: 1024px) {
   .header__title {
+    /* (1024px, 21px) -> (1170px, 15px) */
+    margin-bottom: calc(
+      (15 - 21) / (1170 - 1024) * 
+      100vw + 
+      21px - 
+      (15 - 21) / (1170 - 1024) * 
+      1024px
+    );
     /* (1024px, 54px) -> (1170px, 80px) */
     /* Изменение: 26px */
     font-size: calc(
@@ -35,5 +42,6 @@
 @media (min-width: 1170px) {
   .header__title {
     font-size: 80px;
+    margin-bottom: 15px;
   }
 }

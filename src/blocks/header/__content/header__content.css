@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
+  padding-top: 13px;
   text-align: center;
 }
 
@@ -18,4 +19,10 @@
   transform: translateX(-50%);
   background: #fff;
   z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  .header__content {
+    padding-top: 0;
+  }
 }
