@@ -105,6 +105,9 @@
   --pink-red-lighter: #fa41aa;
   --orange: #ff4e2e;
   --orange-darker: #fa2500;
+  --main-text-color: #8993ad;
+  --darker-text-color: #1f1f24;
+  --title-text-color: #1f1f24; 
   box-sizing: border-box;
 }
 
@@ -119,4 +122,5 @@ body {
   padding: 0;
   font-size: 100%;
   font-family: Roboto, sans-serif;
+  color: var(--main-text-color);
 }

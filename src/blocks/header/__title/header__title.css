@@ -1,0 +1,39 @@
+.header__title {
+  margin: 0 0 10px 0;
+  font-weight: 900;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .header__title {
+    /* (320px, 10px) -> (1024px, 21px) */
+    margin-bottom: calc(
+      3.375rem +
+      (26 - 0) / (1170 - 1024) * 
+      100vw + 
+      0px - 
+      (26 - 0) / (1170 - 1024) * 
+      1024px
+    );;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__title {
+    /* (1024px, 54px) -> (1170px, 80px) */
+    /* Изменение: 26px */
+    font-size: calc(
+      3.375rem +
+      (26 - 0) / (1170 - 1024) * 
+      100vw + 
+      0px - 
+      (26 - 0) / (1170 - 1024) * 
+      1024px
+    );
+  } 
+}
+
+@media (min-width: 1170px) {
+  .header__title {
+    font-size: 80px;
+  }
+}

@@ -1,0 +1,27 @@
+.title {
+  color: var(--title-text-color);
+  font-size: 1.875rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+@media (min-width: 320px) {
+  .title {
+    /* (320px, 30px) -> (1024px, 54px) */
+    /* Изменение: 24px */
+    font-size: calc(
+      1.875rem +
+      (24 - 0) / (1024 - 320) * 
+      100vw + 
+      0px - 
+      (24 - 0) / (1024 - 320) * 
+      320px
+    );
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: calc(1.875rem + 24px);
+  }
+}
