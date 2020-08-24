@@ -1,3 +1,7 @@
+.header-contacts__button {
+  width: 207px;
+}
+
 @media (max-width: 1024px) {
   .header-contacts__button {
     display: block;
