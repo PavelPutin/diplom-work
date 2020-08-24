@@ -1,0 +1,10 @@
+@media (max-width: 1024px) {
+  .header-contacts__button {
+    display: block;
+    padding: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 11px;
+  }
+}

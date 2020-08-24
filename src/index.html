@@ -25,7 +25,7 @@
 
       <div class="header__top-bar">
 
-        <nav class="nav pos-relative">
+        <nav class="nav">
           <button class="nav__toggle" type="button">
             <svg class="nav-toggle__svg">
               <linearGradient id="gradient_for_last_line" x1="0" x2="0" y1="1" y2="0">
@@ -50,11 +50,18 @@
           </ul>
         </nav>
 
-        <div class="contacts">
+        <div class="header-contacts contacts">
           <div class="contacts__item">
-            <a href="tel:+74999955577" class="contacts__link link">+7 (499) 995-55-77</a>
+            <a href="tel:+74999955577" class="contacts__link header-contacts__link link">+7 (499) 995-55-77</a>
 
-            <button class="button button_outline contacts__button" type="button" aria-label="Заказать звонок">
+            <button 
+              class="button button_style_outline 
+                     button_vertical-padding_small 
+                     button_font-size_small 
+                     contacts__button 
+                     header-contacts__button" 
+              type="button" 
+              aria-label="Заказать звонок">
               <span class="fas fa-phone-alt"></span>
             </button>
           </div>
@@ -71,7 +78,7 @@
           Frontend-разработчик и веб-верстальщик
         </p>
 
-        <button class="button">
+        <button class="button button_vertical-padding_large">
           Узнать больше
         </button>
       </div> 

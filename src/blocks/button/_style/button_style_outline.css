@@ -1,0 +1,15 @@
+.button_style_outline {
+  border-color: var(--pink-red);
+  background: transparent;
+  color: var(--pink-red);
+}
+
+.button_style_outline:hover {
+  background: var(--pink-red);
+  color: #fff;
+}
+
+.button_style_outline:active {
+  background: var(--pink-red-lighter);
+  border-color: var(--pink-red-lighter);
+}

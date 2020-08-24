@@ -1,19 +1,15 @@
 .header {
-  /* 
-    max-value: 770px
-    min-value: 650px
-    max-breakpoint: 1024px
-    min-breakpoint: 320px
-    y(x) = kx + b */
-    height: calc(
-      (770 - 650) / (1024 - 320) * 
-      100vw + 
-      650px - 
-      (770 - 650) / (1024 - 320) * 
-      320px);
-    min-height: 650px;
-    max-height: 770px;
-    
+  /* (320px, 650px) -> (770px, 1024px) */
+  height: calc(
+    (770 - 650) / (1024 - 320) * 
+    100vw + 
+    650px - 
+    (770 - 650) / (1024 - 320) * 
+    320px
+  );
+  min-height: 650px;
+  max-height: 770px;
+  
 }
 
 .header__decoration {

@@ -3,7 +3,23 @@
   place-content: center;
   width: 100%;
   max-width: 320px;
+  padding: 0;
   border: 1px solid var(--orange);
   background: var(--orange);
   color: #fff;
+  font-size: 18px;
+  transition:
+    0.3s color linear,
+    0.3s background linear,
+    0.3s border-color linear;
+}
+
+.button:hover {
+  background: #fff;
+  color: var(--orange);
+}
+
+.button:active {
+  border-color: var(--orange-darker);
+  color: var(--orange-darker);
 }

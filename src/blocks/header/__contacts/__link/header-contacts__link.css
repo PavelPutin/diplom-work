@@ -1,0 +1,10 @@
+.header-contacts__link {
+  /* (320px, 35px) -> (1024px, 29px) */
+  margin-right: calc(
+    (29 - 35) / (1024 - 320) * 
+    100vw + 
+    35px - 
+    (29 - 35) / (1024 - 320) * 
+    320px
+  );
+}

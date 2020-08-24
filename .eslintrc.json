@@ -1,6 +1,0 @@
-{
-  "extends": [
-    "standard",
-    "htmlacademy/es6"
-  ]
-}

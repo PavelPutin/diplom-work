@@ -1,0 +1,25 @@
+.contacts__link {
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 320px) {
+  .contacts__link {
+    /* (320px, 20px) -> (1024px, 25px) */
+    /* Изменение: 5px */
+    font-size: calc(
+      1.25rem +
+      (5 - 0) / (1024 - 320) * 
+      100vw + 
+      0px - 
+      (5 - 0) / (1024 - 320) * 
+      320px
+    );
+  }
+}
+
+@media (min-width: 1024px) {
+  .contacts__link {
+    font-size: calc(1.25rem + 5px);
+  }
+}

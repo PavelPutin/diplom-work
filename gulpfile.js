@@ -97,9 +97,6 @@ function css() {
     .pipe(webpcss())
     .pipe(dest(PATH.build.css))
     .pipe(cleanCss())
-    // .pipe(rename({
-    //   extname: `.min.css`
-    // }))
     .pipe(dest(PATH.build.css))
     .pipe(browserSync.stream());
 }
@@ -107,8 +104,8 @@ function css() {
 function js() {
   return src(PATH.src.js)
     .pipe(concat(`script.js`))
-    .pipe(eslint())
-    .pipe(eslint.format())
+    // .pipe(eslint())
+    // .pipe(eslint.format())
     .pipe(babel({
       presets: [`@babel/env`]
     }))

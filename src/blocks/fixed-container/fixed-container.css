@@ -2,12 +2,7 @@
   max-width: 1170px;
   min-width: 320px;
   margin: 0 auto;
-  /* 
-    max-value: 40px
-    min-value: 20px
-    max-breakpoint: 1024px
-    min-breakpoint: 320px
-    y(x) = kx + b */
+  /* (320px, 20px) -> (1024px, 40px) */
   padding: 0 calc(
       (40 - 20) / (1024 - 320) * 
       100vw + 
