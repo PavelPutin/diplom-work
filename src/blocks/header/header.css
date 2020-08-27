@@ -1,5 +1,5 @@
 .header {
-  /* (320px, 650px) -> (770px, 1024px) */
+  /* (320px, 650px) -> (1024px, 770px) */
   height: calc(
     (770 - 650) / (1024 - 320) * 
     100vw + 
@@ -9,12 +9,4 @@
   );
   min-height: 650px;
   max-height: 770px;
-  
-}
-
-.header__decoration {
-  position: absolute;
-  width: 420px;
-  height: auto;
-  z-index: -1;
 }
