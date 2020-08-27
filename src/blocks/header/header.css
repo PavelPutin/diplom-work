@@ -10,3 +10,9 @@
   min-height: 650px;
   max-height: 770px;
 }
+
+@media (min-width: 1024px) {
+  .header {
+    overflow: hidden;
+  }
+}

@@ -5,11 +5,12 @@
   justify-content: space-between;
   height: 100%;
   padding-top: 26px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
   .header__inner {
     padding-top: 29px;
+    overflow: visible;
   }
 }
