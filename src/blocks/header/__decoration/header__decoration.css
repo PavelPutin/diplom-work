@@ -30,6 +30,7 @@
 
 @media (min-width: 1920px) {
   .header__decoration {
+    width: 863px;
     left: 732px;
   }
 }
