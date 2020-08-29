@@ -1,0 +1,23 @@
+.services__button {
+  margin: 0 auto;
+  margin-top: 52px;
+}
+
+@media (min-width: 320px) {
+  .services__button {
+    /* (320px, 52px) -> (790px, 97px) */
+    margin-top: calc(
+      (97 - 52) / (790 - 320) * 
+      100vw + 
+      52px - 
+      (97 - 52) / (790 - 320) * 
+      320px
+    );
+  }
+}
+
+@media (min-width: 790px) {
+  .services__button {
+    margin-top: 97px;
+  }
+}

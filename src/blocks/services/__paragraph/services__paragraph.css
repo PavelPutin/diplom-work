@@ -1,6 +1,7 @@
 .services__paragraph {
   position: relative;
   max-width: 256px;
+  margin: 0;
   padding-top: 75px;
   text-align: center;
 }
