@@ -1,4 +1,5 @@
 .header__inner {
+  --bottom-for-before: -10px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,9 +9,72 @@
   overflow: hidden;
 }
 
+.header__inner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: var(--bottom-for-before);
+  /* (320px, 20px) -> (1024px, 40px) -> (1920px -40px) */
+  right: 20px;
+
+  /* width: 438px;
+  height: 626px; */
+  width: 225px;
+  height: 330px;
+  background: url(../img/header/img/header-photo.png) 0 0/contain no-repeat;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .header__inner::before {
+    /* (320px, 225px) -> (1024px, 438px) */
+    width: calc(
+      (438 - 225) / (1024 - 320) * 
+      100vw + 
+      225px - 
+      (438 - 225) / (1024 - 320) * 
+      320px
+    );
+    /* (320px, 330px) -> (1024px, 626px) */
+    height: calc(
+      (626 - 330) / (1024 - 320) * 
+      100vw + 
+      330px - 
+      (626 - 330) / (1024 - 320) * 
+      320px
+    );
+    /* (320px, 20px) -> (1024px, 40px) -> (1920px -40px) */
+    right: calc(
+      (40 - 20) / (1024 - 320) * 
+      100vw + 
+      20px - 
+      (40 - 20) / (1024 - 320) * 
+      320px
+    );
+  }
+}
+
 @media (min-width: 1024px) {
   .header__inner {
     padding-top: 29px;
     overflow: visible;
+  }
+
+  .header__inner::before {
+    width: 428px;
+    height: 626px;
+    /* (320px, 20px) -> (1024px, 40px) -> (1920px -40px) */
+    right: calc(
+      (-40 - 40) / (1920 - 1024) * 
+      100vw + 
+      40px - 
+      (-40 - 40) / (1920 - 1024) * 
+      1024px
+    );
+  }
+}
+
+@media (min-width: 1920px) {
+  .header__inner::before {
+    right: -40px;
   }
 }
