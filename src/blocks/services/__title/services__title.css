@@ -1,0 +1,22 @@
+.services__title {
+  margin-bottom: 46px;
+}
+
+@media (min-width: 320px) {
+  .services__title {
+    /* (320px, 46px) -> (1024px, 102px) */
+    margin-bottom: calc(
+      (102 - 46) / (1024 - 320) * 
+      100vw + 
+      46px - 
+      (102 - 46) / (1024 - 320) * 
+      320px
+    );
+  }
+}
+
+@media (min-width: 320px) {
+  .services__title {
+    margin-bottom: 102px;
+  }
+}
