@@ -9,5 +9,8 @@ function setHeaderInnerBeforeBottom() {
   if (document.documentElement.clientWidth < 1024) {
     headerInner.style.setProperty(`--bottom-for-before`, `${headerContent.clientHeight}px`);
   } 
+  else {
+    headerInner.style.setProperty(`--bottom-for-before`, `0px`);
+  }
 }
 
