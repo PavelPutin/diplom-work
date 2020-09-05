@@ -1,0 +1,30 @@
+.page__section {
+  margin: 49px 0 51px 0;
+}
+
+@media (min-width: 320px) {
+  .page__section {
+    /* (320px, 49px) -> (1024px, 97px) */
+    margin-top: calc(
+      (97 - 49) / (1024 - 320) * 
+      100vw + 
+      49px - 
+      (97 - 49) / (1024 - 320) * 
+      320px
+    );
+    /* (320px, 51px) -> (1024px, 106px) */
+    margin-bottom: calc(
+      (106 - 51) / (1024 - 320) * 
+      100vw + 
+      51px - 
+      (106 - 51) / (1024 - 320) * 
+      320px
+    );
+  }
+}
+
+@media (min-width: 1024px) {
+  .page__section {
+    margin: 97px 0 106px 0;
+  }
+}
