@@ -1,0 +1,36 @@
+.offer__title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+@media (min-width: 320px) {
+  .offer__title {
+    /* (320px, 50px) -> (1024px, 40px) */
+    margin-bottom: calc(
+      (40 - 50) / (1024 - 320) *
+      100vw +
+      50px -
+      (40 - 50) / (1024 - 320) * 
+      320px
+    );
+    /* (320px, 38px) -> (1024px, 45px) */
+    /* Изменение: 7px */
+    font-size: calc(
+      1.75rem +
+      (7 - 0) / (1024 - 320) * 
+      100vw + 
+      0px - 
+      (7 - 0) / (1024 - 320) * 
+      320px
+    );
+  }
+}
+
+@media (min-width: 1024px) {
+  .offer__title {
+    margin-bottom: 40px;
+    font-size: calc(1.75rem + 7px);
+  }
+}
