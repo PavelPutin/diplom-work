@@ -1,0 +1,19 @@
+.header-nav__link {
+  padding: 5px;
+}
+
+.header-nav__link:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 1025px) {
+  .header-nav__link {
+    padding: 0;
+  }
+
+  .header-nav__link:hover {
+    color: var(--pink-red);
+    border-bottom-color: var(--pink-red);
+  }
+}

@@ -1,20 +1,4 @@
 .nav__list {
-  position: absolute;
   display: flex;
   flex-direction: column;
-  transform-origin: 10px 0px;
-  transform: scale(0);
-  transition: 0.3s transform linear;
-}
-
-.nav__list.active {
-  transform: scale(1);
-}
-
-@media(min-width: 1025px) {
-  .nav__list {
-    position: static;
-    flex-direction: row;
-    transform: scale(1);
-  }
 }
