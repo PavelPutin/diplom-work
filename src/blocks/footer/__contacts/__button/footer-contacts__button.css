@@ -1,0 +1,11 @@
+.footer-contacts__button {
+    max-width: 280px;
+    min-width: 248px;
+    width: calc(
+        (248 - 280) / (1024 - 320) * 
+        100vw + 
+        280px - 
+        (248 - 280) / (1024 - 320) * 
+        320px
+    );
+}
