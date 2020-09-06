@@ -20,7 +20,7 @@ const PATH = {
     css: `${SOURCE_FOLDER}/blocks/**/*.css`,
     js: `${SOURCE_FOLDER}/blocks/**/*.js`,
     img: `${SOURCE_FOLDER}/blocks/**/*.{jpg,png,gif,svg,webp,ico}`,
-    fonts: `${SOURCE_FOLDER}/${FONTS_FOLDER}/**/*.ttf`,
+    fonts: `${SOURCE_FOLDER}/${FONTS_FOLDER}/**/*.{ttf,woff,woff2}`,
   },
   watch: {
     html: `${SOURCE_FOLDER}/*.html`,
