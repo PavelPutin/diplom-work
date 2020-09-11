@@ -1,11 +1,31 @@
 .footer-contacts__button {
-    max-width: 280px;
-    min-width: 248px;
-    width: calc(
-        (248 - 280) / (1024 - 320) * 
-        100vw + 
-        280px - 
-        (248 - 280) / (1024 - 320) * 
-        320px
+  max-width: 280px;
+  min-width: 248px;
+  width: calc(
+    (248 - 280) / (1024 - 320) * 
+    100vw + 
+    280px - 
+    (248 - 280) / (1024 - 320) * 
+    320px
+  );
+  margin-bottom: 50px;
+}
+
+@media (min-width: 320px) {
+  .footer-contacts__button {
+    /* (320px, 50px) -> (1024px, 31px) */
+    margin-bottom: calc(
+      (31 - 50) / (1024 - 320) * 
+      100vw + 
+      50px - 
+      (31 - 50) / (1024 - 320) * 
+      320px
     );
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-contacts__button {
+    margin-bottom: 31px;
+  }
 }
