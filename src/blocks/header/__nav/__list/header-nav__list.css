@@ -1,0 +1,18 @@
+.header-nav__list {
+  position: absolute;
+  transform-origin: 10px 0px;
+  transform: scale(0);
+  transition: 0.3s transform linear;
+}
+
+.header-nav__list.active {
+  transform: scale(1);
+}
+
+@media(min-width: 1025px) {
+  .header-nav__list {
+    position: static;
+    flex-direction: row;
+    transform: scale(1);
+  }
+}
