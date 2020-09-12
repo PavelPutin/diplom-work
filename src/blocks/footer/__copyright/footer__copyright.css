@@ -1,0 +1,37 @@
+.footer__copyright {
+  padding: 20px 0;
+  background: #31293c;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+@media (min-width: 320px) {
+  .footer__copyright {
+    /* (320px, 20px) -> (1024px, 32px) */
+    padding: calc(
+      (32 - 20) / (1024 - 320) *
+      100vw +
+      20px -
+      (32 - 20) / (1024 - 320) *
+      320px
+    ) 0;
+    /* (320px, 12px) -> (1024px, 16px) */
+    /* Изменение: 4px */
+    font-size: calc(
+      0.75rem +
+      (4 - 0) / (1024 - 320) * 
+      100vw + 
+      0px - 
+      (4 - 0) / (1024 - 320) * 
+      320px
+    );
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__copyright {
+    padding: 32px 0;
+    font-size: calc(0.75rem + 4px);
+  }
+}
