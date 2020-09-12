@@ -1,0 +1,7 @@
+.footer-contacts__item {
+  margin-bottom: 30px;
+}
+
+.footer-contacts__item:last-of-type {
+  margin-bottom: 0;
+}

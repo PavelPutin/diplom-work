@@ -1,0 +1,9 @@
+.footer__social {
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .footer__social {
+    justify-content: start;
+  }
+}

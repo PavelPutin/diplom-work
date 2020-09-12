@@ -1,0 +1,13 @@
+.footer__column {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .footer__column:first-of-type {
+    margin-bottom: 50px;
+  }
+  
+  .footer__column:nth-of-type(2) {
+    margin-bottom: 25px;
+  } 
+}
