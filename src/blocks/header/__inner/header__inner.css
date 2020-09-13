@@ -24,24 +24,29 @@
   background: url(../img/header/img/header-photo.png) 0 0/contain no-repeat;
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 320px){
   .header__inner::before {
-    /* (320px, 225px) -> (1024px, 438px) */
+    /* (320px, 225px) -> (560px, 297px) */
     width: calc(
-      (438 - 225) / (1024 - 320) * 
+      (297 - 225) / (560 - 320) * 
       100vw + 
       225px - 
-      (438 - 225) / (1024 - 320) * 
+      (297 - 225) / (560 - 320) * 
       320px
     );
-    /* (320px, 330px) -> (1024px, 626px) */
+    /* (320px, 330px) -> (560px, 430px) */
     height: calc(
-      (626 - 330) / (1024 - 320) * 
+      (430 - 330) / (560 - 320) * 
       100vw + 
       330px - 
-      (626 - 330) / (1024 - 320) * 
+      (430 - 330) / (560 - 320) * 
       320px
     );
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .header__inner::before {
     /* (320px, 20px) -> (1024px, 40px) -> (1920px -40px) */
     right: calc(
       (40 - 20) / (1024 - 320) * 
@@ -50,6 +55,13 @@
       (40 - 20) / (1024 - 320) * 
       320px
     );
+  }
+}
+
+@media (min-width: 560px) {
+  .header__inner::before {
+    width: 297px;
+    height: 430px;
   }
 }
 

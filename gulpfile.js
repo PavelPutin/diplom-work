@@ -104,8 +104,6 @@ function css() {
 function js() {
   return src(PATH.src.js)
     .pipe(concat(`script.js`))
-    // .pipe(eslint())
-    // .pipe(eslint.format())
     .pipe(babel({
       presets: [`@babel/env`]
     }))

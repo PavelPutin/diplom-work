@@ -1,7 +1,0 @@
-.header-flying-decor__item {
-  background: linear-gradient(var(--pink-red), var(--orange));
-  background-clip: text;
-  -webkit-text-fill-color: inherit;
-  color: var(--pink-red);
-  animation: 1s linear forwards;
-}

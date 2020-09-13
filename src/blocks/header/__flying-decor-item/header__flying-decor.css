@@ -1,0 +1,31 @@
+.header__flying-decor {
+  top: var(--top);
+  left: var(--left);
+  background: linear-gradient(45deg, var(--pink-red), var(--orange));
+  background-clip: text;
+  -webkit-text-fill-color: inherit;
+  color: var(--pink-red);
+  animation: 
+    fly-to-position 1s ease forwards, 
+    wiggle 0.8s ease-in-out 1s infinite alternate;
+}
+
+@keyframes fly-to-position {
+  from {
+    top: 50%;
+    left: 50%;
+  }
+  to {
+    top: var(--top);
+    left: var(--left);
+  }
+}
+
+@keyframes wiggle {
+  from {
+    top: var(--top);
+  }
+  to {
+    top: calc(var(--top) + 15px);
+  }
+}

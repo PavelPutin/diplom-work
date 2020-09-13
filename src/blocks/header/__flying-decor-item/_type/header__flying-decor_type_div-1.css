@@ -1,15 +1,13 @@
-.header-flying-decor__item_type_div-1 {
+.header__flying-decor_type_div-1 {
   --top: 146px;
   --left: 247px;
-  top: 0;
-  left: 0;
-  font-size: 1.8125rem;
+  --font-size: 1.8125rem;
+  font-size: var(--font-size);
   transform: rotate(20deg);
-  animation-name: braces_fly;
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
-  .header-flying-decor__item_type_div-1 {
+  .header__flying-decor_type_div-1 {
     /* (320px, 146px) -> (1024px, 154px) */
     --top: calc(
       (154 - 146) / (1024 - 320) * 
@@ -29,7 +27,7 @@
     /* (320px, 24px) -> (1024px, 48px) */
     /* Изменение: 24px */
     font-size: calc(
-      1.8125rem +
+      var(--font-size) +
       (24 - 0) / (1024 - 320) * 
       100vw + 
       0px - 
@@ -40,7 +38,7 @@
 }
 
 @media (min-width: 1024px) {
-  .header-flying-decor__item_type_div-1 {
+  .header__flying-decor_type_div-1 {
     /* (1024px, 154px) -> (1980px, 170px) */
     --top: calc(
       (170 - 154) / (1980 - 1024) * 
@@ -57,24 +55,13 @@
       (789 - 888) / (1980 - 1024) * 
       1024px
     );
-    font-size: calc(1.8125rem + 24px);
+    font-size: calc(var(--font-size) + 24px);
   }
 }
 
 @media (min-width: 1980px) {
-  .header-flying-decor__item_type_div-1 {
+  .header__flying-decor_type_div-1 {
     --top: 170px;
     --left: 789px
-  }
-}
-
-@keyframes braces_fly {
-  from {
-    top: 50%;
-    left: 50%;
-  }
-  to {
-    top: var(--top);
-    left: var(--left);
   }
 }

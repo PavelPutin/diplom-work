@@ -1,9 +1,8 @@
-const navToggle = document.querySelector(`.header-nav__toggle`);
-const navList = document.querySelector(`.header-nav__list`);
-const navDecoration = document.querySelector(`.header-nav__decoration`);
+{
+  const navToggle = document.querySelector(`.header-nav__toggle`);
+  const elementToToggle = document.querySelectorAll(`.header-nav__toggle, .header-nav__list, .header-nav__decoration`)
 
-navToggle.addEventListener(`click`, () => {
-  [navToggle, navList, navDecoration].forEach((element) => {
-    element.classList.toggle(`active`);
-  })
-});
+  navToggle.addEventListener(`click`, () => {
+    elementToToggle.forEach(element => element.classList.toggle(`active`));
+  });
+}

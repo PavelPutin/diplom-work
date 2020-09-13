@@ -1,15 +1,14 @@
-.header-flying-decor__item_type_braces {
+.header__flying-decor_type_braces {
   --top: 102px;
   --left: 49px;
-  top: 0;
-  left: 0;
+  /* top: var(--top);
+  left: var(--left); */
   font-size: 1.5rem;
   transform: rotate(20deg);
-  animation-name: braces_fly;
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
-  .header-flying-decor__item_type_braces {
+  .header__flying-decor_type_braces {
     /* (320px, 102px) -> (1024px, 160px) */
     --top: calc(
       (160 - 102) / (1024 - 320) * 
@@ -40,7 +39,7 @@
 }
 
 @media (min-width: 1024px) {
-  .header-flying-decor__item_type_braces {
+  .header__flying-decor_type_braces {
     /* (1024px, 160px) -> (1980px, 138px) */
     --top: calc(
       (138 - 160) / (1980 - 1024) * 
@@ -62,19 +61,8 @@
 }
 
 @media (min-width: 1980px) {
-  .header-flying-decor__item_type_braces {
+  .header__flying-decor_type_braces {
     --top: 138px;
     --left: -250px
-  }
-}
-
-@keyframes braces_fly {
-  from {
-    top: 50%;
-    left: 50%;
-  }
-  to {
-    top: var(--top);
-    left: var(--left);
   }
 }
